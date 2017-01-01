@@ -30,7 +30,7 @@ public class AccountManagerTest {
     private Account accountOther;
 
     @After
-    public void close(){
+    public void clear(){
         accountManager.delAll();
     }
 

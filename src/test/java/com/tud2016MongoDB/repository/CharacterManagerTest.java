@@ -31,7 +31,7 @@ public class CharacterManagerTest {
     Character characterOther;
 
     @After
-    public void close(){
+    public void clear(){
         characterManager.delAll();
     }
 
