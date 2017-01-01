@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
     http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
-    <context:component-scan base-package="com.tud2016MongoDB" />
+    <context:component-scan base-package="com.tud2016MongoDB.service" />
 
     <!-- Mongo stuff -->
     <mongo:mongo id="mongo" host="localhost" port="27017" />
@@ -17,6 +17,48 @@
         <constructor-arg name="databaseName" value="characterList"/>
     </bean>
 
-    <mongo:repositories base-package="com.tud2016MongoDB" />
+    <mongo:repositories base-package="com.tud2016MongoDB.repository" />
+
+
+    <bean id="account1" class="com.tud2016MongoDB.domain.Account">
+        <property name="login" value="Account1" />
+        <property name="password" value="qwerty1234" />
+    </bean>
+
+    <bean id="account2" class="com.tud2016MongoDB.domain.Account">
+        <property name="login" value="Account2" />
+        <property name="password" value="qwerty1234" />
+    </bean>
+
+    <bean id="account3" class="com.tud2016MongoDB.domain.Account">
+        <property name="login" value="Account3" />
+        <property name="password" value="qwerty1234" />
+    </bean>
+
+    <bean id="accountOther" class="com.tud2016MongoDB.domain.Account">
+        <property name="login" value="InneKonto" />
+        <property name="password" value="InneHasło" />
+    </bean>
+
+    <bean id="character1" class="com.tud2016MongoDB.domain.Character">
+        <property name="nick" value="Character1" />
+        <property name="characterClass" value="Warrior" />
+        <property name="characterRace" value="Human" />
+        <property name="level" value="80" />
+    </bean>
+
+    <bean id="character2" class="com.tud2016MongoDB.domain.Character">
+        <property name="nick" value="Character2" />
+        <property name="characterClass" value="Mage" />
+        <property name="characterRace" value="Elf" />
+        <property name="level" value="100" />
+    </bean>
+
+    <bean id="character3" class="com.tud2016MongoDB.domain.Character">
+        <property name="nick" value="Character3" />
+        <property name="characterClass" value="Hunter" />
+        <property name="characterRace" value="Orc" />
+        <property name="level" value="90" />
+    </bean>
 
 </beans>
