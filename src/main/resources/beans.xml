@@ -61,4 +61,11 @@
         <property name="level" value="90" />
     </bean>
 
+    <bean id="characterOther" class="com.tud2016MongoDB.domain.Character">
+        <property name="nick" value="Inna postać" />
+        <property name="characterClass" value="Warlock" />
+        <property name="characterRace" value="Undead" />
+        <property name="level" value="60" />
+    </bean>
+
 </beans>

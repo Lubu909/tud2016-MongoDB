@@ -59,7 +59,7 @@ public class AccountManagerTest {
         accountManager.addAccount(new Account("Account5","hasło"));
         accountManager.addAccount(accountOther);
         List<Account> lista = accountManager.getByAccountRegex("Account");
-        for(Account i : lista) System.out.println(i.getLogin());
+        //for(Account i : lista) System.out.println(i.getLogin());
         assertEquals(3,lista.size());
     }
 
